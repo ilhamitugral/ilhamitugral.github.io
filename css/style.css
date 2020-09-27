@@ -1,0 +1,81 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Secular+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #484848;
+}
+
+.ilhamitugral-header-border {
+    border-top: .65rem solid #ce5311;
+}
+
+.ilhamitugral-brand-panel {
+    display: table;
+    margin: auto;
+    height: calc(100vh - .65rem);
+}
+
+.ilhamitugral-brand-area {
+    display: table-cell;
+    margin: 0 auto;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.ilhamitugral-brand-name {
+    margin: 0 0 1rem;
+    font-size: 48pt;
+    font-family: 'Secular One', sans-serif;
+    color: #d85b17;
+    text-align: center;
+}
+
+.ilhamitugral-brand-description {
+    margin: 0 0 1rem;
+    font-size: 32pt;
+    text-align: center;
+    font-family: 'Courier Prime', monospace;
+    color: rgba(187, 110, 68, .8);
+}
+
+.ilhamitugral-referal-link-list {
+    display: inline-block;
+}
+
+.ilhamitugral-referal-link-list a {
+    display: block;
+    box-sizing: border-box;
+}
+
+.ilhamitugral-referal-links {
+    display: block;
+    margin: 1rem;
+    width: 48px;
+    height: 48px;
+    background-size: 100% 100% !important;
+    box-sizing: border-box;
+}
+
+.ilhamitugral-twitter {
+    background: url(http://ilhamitugral/img/twitter.png);
+}
+
+.ilhamitugral-instagram {
+    background: url(http://ilhamitugral/img/instagram.png);
+}
+
+.ilhamitugral-github {
+    background: url(http://ilhamitugral/img/github.png);
+}
+
+.ilhamitugral-brand-copyright {
+    font-family: 'Secular One', Helvetica, Arial, sans-serif;
+    font-size: 16pt;
+    color: rgb(189, 110, 67, .7);
+    text-align: center;
+}
