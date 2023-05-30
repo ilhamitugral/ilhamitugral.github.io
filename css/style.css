@@ -1,81 +1,132 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Secular+One&display=swap');
-
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background: #484848;
-}
-
-.ilhamitugral-header-border {
-    border-top: .65rem solid #ce5311;
-}
-
-.ilhamitugral-brand-panel {
-    display: table;
-    margin: auto;
-    height: calc(100vh - .65rem);
-}
-
-.ilhamitugral-brand-area {
-    display: table-cell;
-    margin: 0 auto;
-    vertical-align: middle;
-    text-align: center;
-}
-
-.ilhamitugral-brand-name {
-    margin: 0 0 1rem;
-    font-size: 48pt;
-    font-family: 'Secular One', sans-serif;
-    color: #d85b17;
-    text-align: center;
-}
-
-.ilhamitugral-brand-description {
-    margin: 0 0 1rem;
-    font-size: 32pt;
-    text-align: center;
-    font-family: 'Courier Prime', monospace;
-    color: rgba(187, 110, 68, .8);
-}
-
-.ilhamitugral-referal-link-list {
-    display: inline-block;
-}
-
-.ilhamitugral-referal-link-list a {
-    display: block;
+    min-height: 100vh;
+    background: #f5f5f5;
     box-sizing: border-box;
 }
 
-.ilhamitugral-referal-links {
-    display: block;
-    margin: 1rem;
-    width: 48px;
-    height: 48px;
-    background-size: 100% 100% !important;
+.main {
+    width: 1190px;
+    margin: 0rem auto;
+}
+
+.top-line {
+    border: 4px solid #101214;
+}
+
+.page {
+    display: grid;
+    grid-template-areas: '1 2';
+    grid-template-columns: auto 280px;
+    column-gap: 4rem;
+    padding: 4rem;
+    background: #fff;
     box-sizing: border-box;
 }
 
-.ilhamitugral-twitter {
-    background: url(http://ilhamitugral/img/twitter.png);
+.main-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+    height: 140px;
 }
 
-.ilhamitugral-instagram {
-    background: url(http://ilhamitugral/img/instagram.png);
+h1.portfolio-fullname {
+    font: bold 48px Arial, sans-serif;
+    color: #101214;
+    margin-bottom: 1rem;
 }
 
-.ilhamitugral-github {
-    background: url(http://ilhamitugral/img/github.png);
+h2.portfolio-title {
+    font: 36px Arial, sans-serif;
+    color: #101214;
+    margin-bottom: 2rem;
 }
 
-.ilhamitugral-brand-copyright {
-    font-family: 'Secular One', Helvetica, Arial, sans-serif;
-    font-size: 16pt;
-    color: rgb(189, 110, 67, .7);
-    text-align: center;
+.panel-title {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #73808D;
+    letter-spacing: 4px;
+    margin-bottom: .75rem;
+}
+
+.experience-panel {
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    margin-bottom: 2rem;
+}
+
+.experience-title {
+    margin-bottom: .75rem;
+    font-weight: bold;
+    color: #101214;
+}
+
+.experience-company {
+    display: block;
+    margin-bottom: .75rem;
+    color: #101214;
+}
+
+.experience-date {
+    display: block;
+    column-gap: 1rem;
+    margin-bottom: .75rem;
+    color: #73808D;
+}
+
+.experience-detail {
+    color: #101214;
+    line-height: 1.5;
+}
+
+.portfolio-avatar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3.75rem;
+    height: 140px;
+}
+
+.avatar {
+    display: block;
+    background-size: 100% 100%;
+    width: 144px;
+    height: 144px;
+    border-radius: 99em;
+    border: .25rem solid #101214;
+}
+
+.section {
+    margin-bottom: 2rem;
+    color: #73808D;
+}
+
+.section > * {
+    display: block;
+    margin-bottom: .5rem;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.section-title {
+    font-weight: bold;
+}
+
+.section-field {
+    display: block;
+}
+
+.section-field a {
+    text-decoration: none;
+    color: #73808D;
+}
+
+.section-field a:hover {
+    text-decoration: underline;
 }
