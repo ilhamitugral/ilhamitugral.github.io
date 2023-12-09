@@ -2,63 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ilhamitugral - Portfolio</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>ilhamitugral &mdash; Software Developer</title>
+    <meta name="description" content="Hi guys, it's Ilhami. I'm creating lots of things about Computer world. You can reach me on Social Media address.">
+    <meta name="keywords" content="ilhamitugral, ilhami tugral">
 </head>
 <body>
+    <style>
+        * {margin: 0; padding: 0;}
+        body {background: #363636;}
+        .main {display: flex; align-items: center; justify-content: center; width: 100vw; height: 100vh; text-align: center;}
+        h1 {margin-bottom: .5vh; font-family: Arial, Helvetica, sans-serif; font-size: 7vw; color: #eee;}
+        h2 {font-family: Arial, Helvetica, sans-serif; font-size: 4vw; color: #aaa;}
+    </style>
     <div class="main">
-        <div class="top-line"></div>
-        <div class="page">
-            <div class="content">
-                <div class="main-info">
-                    <div class="portfolio-user-info">
-                        <h1 class="portfolio-fullname"></h1>
-                        <h2 class="portfolio-title"></h2>
-                    </div>
-                </div>
-                <div class="experiences-info">
-                    <h3 class="panel-title">EXPERIENCE</h3>
-                    <div class="experiences-panel">
-
-                    </div>
-                    <h3 class="panel-title">EDUCATION</h3>
-                    <div class="education-panel"></div>
-                </div>
-            </div>
-            <div class="right-side">
-                <div class="portfolio-avatar">
-                    <span class="avatar"></span>
-                </div>
-                <div class="section">
-                    <span class="section-field portfolio-email"></span>
-                    <span class="section-field portfolio-phone"></span>
-                    <span class="section-field portfolio-location"></span>
-                </div>
-                <div class="section">
-                    <h3 class="section-title">Industry Knowledge</h3>
-                    <div class="portfolio-industry-knowledge"></div>
-                </div>
-                <div class="section">
-                    <h3 class="section-title">Tools & Technologies</h3>
-                    <span class="section-field portfolio-tools-and-technologies"></span>
-                </div>
-                <div class="section">
-                    <h3 class="section-title">Other Skills</h3>
-                    <span class="section-field portfolio-other-skills"></span>
-                </div>
-                <div class="section">
-                    <h3 class="section-title">Languages</h3>
-                    <div class="portfolio-languages"></div>
-                </div>
-                <div class="section">
-                    <h3 class="title">Social</h3>
-                    <div class="portfolio-social"></div>
-                </div>
-            </div>
+        <div class="panel">
+            <h1>ilhamitugral</h1>
+            <h2>Welcome to my Page!</h2>
         </div>
     </div>
-    <script type="module" src="./js/ilhamitugral.js"></script>
+    <script>
+        const texts = [
+            'Software Developer',
+            'Information Technologies',
+            'PHP Developer',
+            'Javascript Developer',
+            'Software Programmer',
+        ];
+
+        const delay = 200;
+        const textEl = document.getElementsByTagName('h2')[0];
+        let typeStatus = 0;
+        let index = 0;
+        let length = 0;
+
+        window.onload = () => {
+            index = Math.floor(Math.random() * texts.length);
+            textEl.innerText = texts[index];
+
+            setInterval(() => {
+                calculate();
+            }, delay);
+        }
+
+        const calculate = () => {
+            switch(typeStatus) {
+                case 0:
+                    if(textEl.innerText.length > 0) {
+                        textEl.innerText = textEl.innerText.substr(0, textEl.innerText.length-1);
+                    }else {
+                        textEl.innerText = '';
+                        index = Math.floor(Math.random() * texts.length);
+                        typeStatus = 1;
+                        length = 0;
+                    }
+                break;
+
+                case 1:
+                    if(textEl.innerText != texts[index]) {
+                        length++;
+                        textEl.innerText = texts[index].substr(0, length)
+                    }else {
+                        typeStatus = 0;
+                    }
+                break;
+            }
+        }
+    </script>
 </body>
 </html>
